@@ -10,3 +10,4 @@ build/
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
+data/decision_log/*.db*
