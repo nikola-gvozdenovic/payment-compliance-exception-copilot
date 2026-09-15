@@ -1,0 +1,23 @@
+{
+  "payment_id": "PMT-0004",
+  "source_currency": "USD",
+  "destination_currency": "CHF",
+  "corridor": "USD-CHF",
+  "amount": "52300.00",
+  "timestamp": "2026-01-13T09:00:00Z",
+  "iso20022_xml": "<?xml version=\"1.0\" ?>\n<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:pain.001.001.03\">\n  <CstmrCdtTrfInitn>\n    <GrpHdr>\n      <MsgId>MSG-0004</MsgId>\n      <CreDtTm>2026-01-13</CreDtTm>\n      <NbOfTxs>1</NbOfTxs>\n      <CtrlSum>52300.00</CtrlSum>\n      <InitgPty>\n        <Nm>Solara Manufacturing Inc</Nm>\n      </InitgPty>\n    </GrpHdr>\n    <PmtInf>\n      <PmtInfId>PMTINF-0004</PmtInfId>\n      <PmtMtd>TRF</PmtMtd>\n      <NbOfTxs>1</NbOfTxs>\n      <CtrlSum>52300.00</CtrlSum>\n      <ReqdExctnDt>\n        <Dt>2026-01-13</Dt>\n      </ReqdExctnDt>\n      <Dbtr>\n        <Nm>Solara Manufacturing Inc</Nm>\n      </Dbtr>\n      <DbtrAcct>\n        <Id>\n          <IBAN>US64SVBKUS6S3300958879</IBAN>\n        </Id>\n      </DbtrAcct>\n      <DbtrAgt>\n        <FinInstnId>\n          <BIC>SVBKUS6S</BIC>\n        </FinInstnId>\n      </DbtrAgt>\n      <ChrgBr>SLEV</ChrgBr>\n      <CdtTrfTxInf>\n        <PmtId>\n          <EndToEndId>E2E-0004</EndToEndId>\n        </PmtId>\n        <Amt>\n          <InstdAmt Ccy=\"USD\">52300.00</InstdAmt>\n        </Amt>\n        <CdtrAgt>\n          <FinInstnId>\n            <BIC>UBSWCHZH80A</BIC>\n          </FinInstnId>\n        </CdtrAgt>\n        <Cdtr>\n          <Nm>Delta Components AG</Nm>\n        </Cdtr>\n        <CdtrAcct>\n          <Id>\n            <IBAN>CH9300762011623852957</IBAN>\n          </Id>\n        </CdtrAcct>\n        <RmtInf>\n          <Ustrd>PO 44210 components</Ustrd>\n        </RmtInf>\n      </CdtTrfTxInf>\n    </PmtInf>\n  </CstmrCdtTrfInitn>\n</Document>\n",
+  "status": "stuck",
+  "flag_reason": "timeout",
+  "processing_log": [
+    {
+      "timestamp": "2026-01-13T09:00:00Z",
+      "stage": "ingestion",
+      "detail": "payment received and parsed"
+    },
+    {
+      "timestamp": "2026-01-15T09:00:00Z",
+      "stage": "processing",
+      "detail": "no rail acknowledgement received after 48h"
+    }
+  ]
+}

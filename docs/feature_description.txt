@@ -1,0 +1,4 @@
+Now that you have all the context loaded for this ticket, I want you to help me ideate around how we're going to build this out.
+So, I specifically want you to make sure you have full understanding in the code base as it relates to this ticket.
+And then I want you to grill me. I want you to interview me by asking me many questions to make sure
+that we're on the same page for everything with this implementation.

@@ -2,4 +2,23 @@
 name = "paymentcompliance-exceptioncopilot"
 version = "0.1.0"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "pydantic>=2.13.5",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.7",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["data"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"

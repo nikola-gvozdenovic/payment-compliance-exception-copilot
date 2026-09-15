@@ -1,0 +1,23 @@
+{
+  "payment_id": "PMT-0005",
+  "source_currency": "EUR",
+  "destination_currency": "EUR",
+  "corridor": "EUR-EUR",
+  "amount": "3120.75",
+  "timestamp": "2026-01-15T14:02:00Z",
+  "iso20022_xml": "<?xml version=\"1.0\" ?>\n<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:pain.001.001.03\">\n  <CstmrCdtTrfInitn>\n    <GrpHdr>\n      <MsgId>MSG-0005</MsgId>\n      <CreDtTm>2026-01-15</CreDtTm>\n      <NbOfTxs>1</NbOfTxs>\n      <CtrlSum>3120.75</CtrlSum>\n      <InitgPty>\n        <Nm>Meridian Retail Group</Nm>\n      </InitgPty>\n    </GrpHdr>\n    <PmtInf>\n      <PmtInfId>PMTINF-0005</PmtInfId>\n      <PmtMtd>TRF</PmtMtd>\n      <NbOfTxs>1</NbOfTxs>\n      <CtrlSum>3120.75</CtrlSum>\n      <ReqdExctnDt>\n        <Dt>2026-01-15</Dt>\n      </ReqdExctnDt>\n      <Dbtr>\n        <Nm>Meridian Retail Group</Nm>\n      </Dbtr>\n      <DbtrAcct>\n        <Id>\n          <IBAN>ES9121000418450200051332</IBAN>\n        </Id>\n      </DbtrAcct>\n      <DbtrAgt>\n        <FinInstnId>\n          <BIC>CAIXESBB</BIC>\n        </FinInstnId>\n      </DbtrAgt>\n      <ChrgBr>SLEV</ChrgBr>\n      <CdtTrfTxInf>\n        <PmtId>\n          <EndToEndId>E2E-0005</EndToEndId>\n        </PmtId>\n        <Amt>\n          <InstdAmt Ccy=\"EUR\">3120.75</InstdAmt>\n        </Amt>\n        <CdtrAgt>\n          <FinInstnId>\n            <BIC>BAPPIT21</BIC>\n          </FinInstnId>\n        </CdtrAgt>\n        <Cdtr>\n          <Nm>Vantage Supply Partners</Nm>\n        </Cdtr>\n        <CdtrAcct>\n          <Id>\n            <IBAN>IT60X0542811101000000123456</IBAN>\n          </Id>\n        </CdtrAcct>\n        <RmtInf>\n          <Ustrd>Order 55231 restock</Ustrd>\n        </RmtInf>\n      </CdtTrfTxInf>\n    </PmtInf>\n  </CstmrCdtTrfInitn>\n</Document>\n",
+  "status": "flagged",
+  "flag_reason": "duplicate",
+  "processing_log": [
+    {
+      "timestamp": "2026-01-15T14:02:00Z",
+      "stage": "ingestion",
+      "detail": "payment received and parsed"
+    },
+    {
+      "timestamp": "2026-01-15T14:02:30Z",
+      "stage": "duplicate_check",
+      "detail": "matches EndToEndId/amount/creditor of a payment processed 2 minutes earlier"
+    }
+  ]
+}
