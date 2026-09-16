@@ -11,3 +11,4 @@ build/
 .ruff_cache/
 .mypy_cache/
 data/decision_log/*.db*
+rag/chroma_store/
