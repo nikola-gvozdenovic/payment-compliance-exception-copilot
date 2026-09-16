@@ -88,6 +88,42 @@ def test_chunk_metadata_includes_frontmatter_and_chunk_index(tmp_path):
     assert chunks[1].metadata["chunk_index"] == 1
 
 
+def test_chunk_document_preserves_intro_text_before_first_section(tmp_path):
+    body = (
+        "# Title\n\n"
+        "**Watermark disclaimer here.**\n\n"
+        "## Rule\nRule text.\n\n"
+        "## Rationale\nRationale text."
+    )
+    path = _write_doc(tmp_path, body)
+    frontmatter, title, parsed_body = parse_document(path)
+
+    chunks = chunk_document(frontmatter["doc_id"], title, parsed_body, frontmatter)
+
+    assert "Watermark disclaimer here." in chunks[0].text
+    assert "Watermark disclaimer here." not in chunks[1].text
+
+
+def test_chunk_document_does_not_duplicate_title(tmp_path):
+    body = "# Title\n\n**Watermark.**\n\n## Rule\nRule text.\n\n## Rationale\nMore text."
+    path = _write_doc(tmp_path, body)
+    frontmatter, title, parsed_body = parse_document(path)
+
+    chunks = chunk_document(frontmatter["doc_id"], title, parsed_body, frontmatter)
+
+    assert chunks[0].text.count(title) == 1
+
+
+def test_chunk_document_does_not_duplicate_title_in_single_chunk(tmp_path):
+    body = "# Title\n\n**Entity:** Some Company\n"
+    path = _write_doc(tmp_path, body)
+    frontmatter, title, parsed_body = parse_document(path)
+
+    chunks = chunk_document(frontmatter["doc_id"], title, parsed_body, frontmatter)
+
+    assert chunks[0].text.count(title) == 1
+
+
 def test_chunk_metadata_normalizes_empty_list_to_none(tmp_path):
     path = tmp_path / "TEST-0002.md"
     path.write_text(
