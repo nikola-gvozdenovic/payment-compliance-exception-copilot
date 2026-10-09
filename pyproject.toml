@@ -19,7 +19,7 @@ dev = [
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
-testpaths = ["data", "rag"]
+testpaths = ["data", "rag", "guardrails"]
 
 [tool.ruff]
 line-length = 100

@@ -1,0 +1,41 @@
+<svg viewBox="0 0 920 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A stuck payment with real names and account numbers comes in, every name, account number and bank code is swapped for a stand-in label, only the masked payment is allowed into an AI prompt, and a red-team test plants fake personal details and checks that none of them ever show up in the prompt or the answer.">
+  <defs>
+    <marker id="arrow8" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7C8E8C"/>
+    </marker>
+  </defs>
+
+  <rect x="4" y="4" width="912" height="212" rx="18" fill="#F6F5F2" stroke="#E1DED6" stroke-width="1"/>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1B2A2E">
+    <rect x="24" y="40" width="190" height="56" rx="10" fill="#FFFFFF" stroke="#9AACA9" stroke-width="1.6"/>
+    <text x="119" y="64" text-anchor="middle">A stuck payment, with</text>
+    <text x="119" y="81" text-anchor="middle">real names &amp; accounts</text>
+
+    <line x1="214" y1="68" x2="244" y2="68" stroke="#7C8E8C" stroke-width="1.8" marker-end="url(#arrow8)"/>
+
+    <rect x="244" y="40" width="190" height="56" rx="10" fill="#E3F1EC" stroke="#0F6E5C" stroke-width="2.2"/>
+    <text x="339" y="64" text-anchor="middle" fill="#0B4438">Swap each one for a</text>
+    <text x="339" y="81" text-anchor="middle" fill="#0B4438">stand-in label</text>
+
+    <line x1="434" y1="68" x2="464" y2="68" stroke="#7C8E8C" stroke-width="1.8" marker-end="url(#arrow8)"/>
+
+    <rect x="464" y="40" width="190" height="56" rx="10" fill="#FFFFFF" stroke="#9AACA9" stroke-width="1.6"/>
+    <text x="559" y="64" text-anchor="middle">Only the masked version</text>
+    <text x="559" y="81" text-anchor="middle">may enter an AI prompt</text>
+
+    <line x1="654" y1="68" x2="684" y2="68" stroke="#7C8E8C" stroke-width="1.8" marker-end="url(#arrow8)"/>
+
+    <rect x="684" y="40" width="190" height="56" rx="10" fill="#FFFFFF" stroke="#9AACA9" stroke-width="1.6"/>
+    <text x="779" y="64" text-anchor="middle">AI reads and answers</text>
+    <text x="779" y="81" text-anchor="middle">using labels only</text>
+
+    <!-- Red-team test checks the prompt and the answer -->
+    <rect x="404" y="140" width="320" height="56" rx="10" fill="#FBEFE6" stroke="#B5562A" stroke-width="1.6"/>
+    <text x="564" y="164" text-anchor="middle" fill="#6B2E12">Red-team test: plant fake details,</text>
+    <text x="564" y="181" text-anchor="middle" fill="#6B2E12">check none leak into prompt or answer</text>
+
+    <line x1="559" y1="140" x2="559" y2="100" stroke="#B5562A" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#arrow8)"/>
+    <line x1="724" y1="160" x2="779" y2="100" stroke="#B5562A" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#arrow8)"/>
+  </g>
+</svg>
